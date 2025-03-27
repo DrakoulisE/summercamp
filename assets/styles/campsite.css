@@ -1,0 +1,102 @@
+.Campsite{
+    background-image: url(../images/campsite-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #f5eedcc1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+        "title title title"
+        "side1 video side2";
+}
+
+.container h3{
+    grid-area: title;
+    margin: 0;
+    align-self: center;
+}
+
+.video{
+    grid-area: video;
+    width: 100%;
+    height: 90%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video{
+    width: 90%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.side{
+    position: relative;
+    padding: 3px;
+    width: 90%;
+    height: 40%;
+    justify-self: center;
+    background-color: #DDA853;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.side1{
+    grid-area: side1;
+}
+.side2{
+    grid-area: side2;
+}
+.top{
+    margin-top: 8%;
+}
+.bottom{
+    place-self: end;
+    justify-self: center;
+    margin-bottom: 8%;
+}
+
+.side p{
+    position: absolute;
+    top: 10px;
+    font-size: 1rem;
+    color: #f5eedc;
+    background-color: #183B4E;
+    width: 100%;
+    text-align: center;
+}
+
+#tents_image{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/tents.jpg);
+    background-size: cover;
+}
+
+#apartments_image{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/apartments.jpg);
+    background-size: cover;
+}
+
+#bangalows_image{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bangalows.jpg);
+    background-size: cover;
+}
+
+#campers_image{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/campers.jpg);
+    background-size: cover;
+}

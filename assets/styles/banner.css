@@ -1,0 +1,134 @@
+input[type="radio"] {
+    display: none;
+}
+
+.banner_slider{
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.slides{
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide{
+    min-width: 100%;
+    height: 80vh;
+    flex: 0 0 auto;
+    background-color: blue;
+}
+
+#image1{
+    background-image: url(../images/beach.jpg);
+    background-position: top;
+    background-size: cover;
+}
+#image2{
+    background-image: url(../images/house.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#image3{
+    background-image: url(../images/wheelHouse.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.slide_dots{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slide_dots label{
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slide_dots label:hover {
+    background-color: rgba(193, 193, 193, 0.7);
+}
+
+input#slide1:checked ~ .slide_dots label:nth-child(1),
+input#slide2:checked ~ .slide_dots label:nth-child(2),
+input#slide3:checked ~ .slide_dots label:nth-child(3) {
+    background-color: #DDA853;
+}
+
+input#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+input#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+.banner_buttons{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(61, 61, 61, 0.8);
+    border-radius: 5%;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.banner_buttons:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.banner_buttons img{
+    height: 90%;
+    filter: invert(100%);
+}
+.banner_buttons:hover > img{
+    filter: invert(82%) 
+            sepia(8%) 
+            saturate(3404%) 
+            hue-rotate(340deg) 
+            brightness(90%) 
+            contrast(91%);
+}
+
+#previous{
+    left: 1%;
+}
+
+#next{
+    right: 1%;
+}
+
+#book{
+    position: absolute;
+    top: 85%;
+    left: 44.7vw;
+    width: 10vw;
+    height: 5vh;
+    background-color: #DDA853;
+    border: 2px solid #DDA853;
+    cursor: pointer;
+    color: #fffaee;
+    font-size: 1rem;
+    transition: 0.1s;
+}
+
+#book:hover{
+    background-color: #183B4E;
+    border: 2px solid #fffaee;
+}
